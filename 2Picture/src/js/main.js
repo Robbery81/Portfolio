@@ -3,7 +3,9 @@ import sliders from './modules/sliders';
 import forms from './modules/forms';
 import mask from './modules/mask';
 import checkTextInputs from './modules/checkTextInputs';
-
+import showMoreStyles from './modules/showMoreStyles';
+import calc from './modules/calc';
+import tabs from './modules/tabs';
 window.addEventListener('DOMContentLoaded', () => {
     "use strict";
 
@@ -14,4 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
     mask('[name="phone"]');
     checkTextInputs('[name="message"]');
     checkTextInputs('[name="name"]');
+    showMoreStyles('.button-styles', '#styles .row');
+    calc('.calc_form', '#size', '#material', '#options', '.promocode', '.calc-price');
+    tabs('.portfolio-menu', '#portfolio img');
 });

@@ -1,4 +1,5 @@
 //import checkNumInputs from './checkNumInputs';
+import {postData} from '../services/requests';
 
 const forms = () => {
     const form = document.querySelectorAll('form'),
@@ -19,14 +20,6 @@ const forms = () => {
     const path = {
         designer: 'assets/server.php',
         question: 'assets/question.php'
-    };
-
-    const postData = async (url, data) => {
-        let res = await fetch(url, {
-            method: "POST",
-            body: data
-        });
-        return await res.text();
     };
 
     const clearInputs = () => {
@@ -76,6 +69,12 @@ const forms = () => {
            
 
             const formData = new FormData(item);
+            if (item.classList.contains('calc_form')) {
+                let resultBlock = document.querySelector('.calc-price');
+                formData.set('sum', resultBlock.textContent);
+                     
+           }
+            
             let api;
             item.closest('.popup-design') || item.classList.contains('calc_form') ? api = path.designer : api = path.question;
             console.log(api);
