@@ -10,6 +10,7 @@ import changeImg from './modules/changeImg';
 import accordion from './modules/accordion';
 import burgerMenu from './modules/burgerMenu';
 import scrollPage from './modules/scrollPage';
+import drop from './modules/drop';
 
 window.addEventListener('DOMContentLoaded', () => {
     "use strict";
@@ -28,4 +29,5 @@ window.addEventListener('DOMContentLoaded', () => {
     accordion('.accordion-heading', '.accordion-block');
     burgerMenu( '.burger-menu','.burger');
     scrollPage('.pageup');
+    drop();
 });
