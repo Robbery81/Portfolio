@@ -9,6 +9,7 @@ import tabs from './modules/tabs';
 import changeImg from './modules/changeImg';
 import accordion from './modules/accordion';
 import burgerMenu from './modules/burgerMenu';
+import scrollPage from './modules/scrollPage';
 
 window.addEventListener('DOMContentLoaded', () => {
     "use strict";
@@ -26,4 +27,5 @@ window.addEventListener('DOMContentLoaded', () => {
     changeImg('.sizes-block');
     accordion('.accordion-heading', '.accordion-block');
     burgerMenu( '.burger-menu','.burger');
+    scrollPage('.pageup');
 });
