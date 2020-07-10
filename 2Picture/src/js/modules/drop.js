@@ -1,3 +1,4 @@
+import {postData} from '../services/requests';
 const drop = () => {
     //drag&drop fuctionality
     //drag *
@@ -11,6 +12,8 @@ const drop = () => {
     //* - спрацбовують на елементі який перетягується
 
     const fileInputs = document.querySelectorAll('[name="upload"]');
+
+    console.log(fileInputs);
 
     ['dragenter', 'dragleave', 'dragover', 'drop'].forEach(eventName => {
         fileInputs.forEach(input => {
@@ -32,7 +35,9 @@ const drop = () => {
         item.closest('.file_upload').style.border = 'none';
         if (item.closest('.calc_form')) {
             item.closest('.file_upload').style.backgroundColor = '#fff';
-        } else {
+        } else if(item.closest('.file_upload_fast')) {
+            item.closest('.file_upload').style.backgroundColor = '#f7e7e6';
+        }else {
             item.closest('.file_upload').style.backgroundColor = '#ededed';
         }
         
@@ -54,6 +59,20 @@ const drop = () => {
         input.addEventListener('drop', (e) => {
            input.files = e.dataTransfer.files;
            input.previousElementSibling.textContent = decorateNameFile(input.files[0].name);
+           console.log("drop");
+           if (input.closest('.file_upload_fast')) {
+               console.log(input.files[0]);
+               const formData = new FormData().append("img", input.files[0]);
+             postData('assets/server.php', formData)
+             .then(res => {
+                console.log(res);
+            })
+            .catch(res => {
+            })
+            .finally(() => {
+                clearInputs();
+            });
+           }
         });
     });
 
@@ -66,6 +85,16 @@ const drop = () => {
 
         return a.join('.');
     }
+
+    const clearInputs = () => {
+        let upload = document.querySelectorAll('[name="upload"]');
+        fileInputs.forEach(item => {
+            item.value = '';
+        });
+        upload.forEach(item => {
+            item.previousElementSibling.textContent = "Файл не выбран";
+        });
+    };
 };
 
 export default drop;

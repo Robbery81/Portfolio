@@ -4700,10 +4700,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_join__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_join__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.function.name */ "./node_modules/core-js/modules/es.function.name.js");
 /* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.promise */ "./node_modules/core-js/modules/es.promise.js");
+/* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_promise_finally__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.promise.finally */ "./node_modules/core-js/modules/es.promise.finally.js");
+/* harmony import */ var core_js_modules_es_promise_finally__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise_finally__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _services_requests__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../services/requests */ "./src/js/services/requests.js");
+
+
+
+
 
 
 
@@ -4721,6 +4732,7 @@ var drop = function drop() {
   //drop - обьект вброшен в dropArea
   //* - спрацбовують на елементі який перетягується
   var fileInputs = document.querySelectorAll('[name="upload"]');
+  console.log(fileInputs);
   ['dragenter', 'dragleave', 'dragover', 'drop'].forEach(function (eventName) {
     fileInputs.forEach(function (input) {
       input.addEventListener(eventName, preventDefault, false);
@@ -4742,6 +4754,8 @@ var drop = function drop() {
 
     if (item.closest('.calc_form')) {
       item.closest('.file_upload').style.backgroundColor = '#fff';
+    } else if (item.closest('.file_upload_fast')) {
+      item.closest('.file_upload').style.backgroundColor = '#f7e7e6';
     } else {
       item.closest('.file_upload').style.backgroundColor = '#ededed';
     }
@@ -4765,6 +4779,17 @@ var drop = function drop() {
     input.addEventListener('drop', function (e) {
       input.files = e.dataTransfer.files;
       input.previousElementSibling.textContent = decorateNameFile(input.files[0].name);
+      console.log("drop");
+
+      if (input.closest('.file_upload_fast')) {
+        console.log(input.files[0]);
+        var formData = new FormData().append("img", input.files[0]);
+        Object(_services_requests__WEBPACK_IMPORTED_MODULE_7__["postData"])('assets/server.php', formData).then(function (res) {
+          console.log(res);
+        }).catch(function (res) {}).finally(function () {
+          clearInputs();
+        });
+      }
     });
   });
 
@@ -4777,6 +4802,16 @@ var drop = function drop() {
 
     return a.join('.');
   }
+
+  var clearInputs = function clearInputs() {
+    var upload = document.querySelectorAll('[name="upload"]');
+    fileInputs.forEach(function (item) {
+      item.value = '';
+    });
+    upload.forEach(function (item) {
+      item.previousElementSibling.textContent = "Файл не выбран";
+    });
+  };
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (drop);
