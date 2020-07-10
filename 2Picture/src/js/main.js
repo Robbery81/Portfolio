@@ -6,6 +6,8 @@ import checkTextInputs from './modules/checkTextInputs';
 import showMoreStyles from './modules/showMoreStyles';
 import calc from './modules/calc';
 import tabs from './modules/tabs';
+import changeImg from './modules/changeImg';
+
 window.addEventListener('DOMContentLoaded', () => {
     "use strict";
 
@@ -19,4 +21,5 @@ window.addEventListener('DOMContentLoaded', () => {
     showMoreStyles('.button-styles', '#styles .row');
     calc('.calc_form', '#size', '#material', '#options', '.promocode', '.calc-price');
     tabs('.portfolio-menu', '#portfolio img');
+    changeImg('.sizes-block');
 });
