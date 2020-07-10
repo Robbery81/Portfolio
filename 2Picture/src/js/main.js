@@ -8,6 +8,7 @@ import calc from './modules/calc';
 import tabs from './modules/tabs';
 import changeImg from './modules/changeImg';
 import accordion from './modules/accordion';
+import burgerMenu from './modules/burgerMenu';
 
 window.addEventListener('DOMContentLoaded', () => {
     "use strict";
@@ -24,4 +25,5 @@ window.addEventListener('DOMContentLoaded', () => {
     tabs('.portfolio-menu', '#portfolio img');
     changeImg('.sizes-block');
     accordion('.accordion-heading', '.accordion-block');
+    burgerMenu( '.burger-menu','.burger');
 });
