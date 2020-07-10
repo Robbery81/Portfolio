@@ -7,6 +7,7 @@ import showMoreStyles from './modules/showMoreStyles';
 import calc from './modules/calc';
 import tabs from './modules/tabs';
 import changeImg from './modules/changeImg';
+import accordion from './modules/accordion';
 
 window.addEventListener('DOMContentLoaded', () => {
     "use strict";
@@ -22,4 +23,5 @@ window.addEventListener('DOMContentLoaded', () => {
     calc('.calc_form', '#size', '#material', '#options', '.promocode', '.calc-price');
     tabs('.portfolio-menu', '#portfolio img');
     changeImg('.sizes-block');
+    accordion('.accordion-heading', '.accordion-block');
 });

@@ -4440,6 +4440,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_calc__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/calc */ "./src/js/modules/calc.js");
 /* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
 /* harmony import */ var _modules_changeImg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/changeImg */ "./src/js/modules/changeImg.js");
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/accordion */ "./src/js/modules/accordion.js");
+
 
 
 
@@ -4463,7 +4465,59 @@ window.addEventListener('DOMContentLoaded', function () {
   Object(_modules_calc__WEBPACK_IMPORTED_MODULE_6__["default"])('.calc_form', '#size', '#material', '#options', '.promocode', '.calc-price');
   Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_7__["default"])('.portfolio-menu', '#portfolio img');
   Object(_modules_changeImg__WEBPACK_IMPORTED_MODULE_8__["default"])('.sizes-block');
+  Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_9__["default"])('.accordion-heading', '.accordion-block');
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/accordion.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/accordion.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var accordion = function accordion(trigersSelector, contentSelector) {
+  var btn = document.querySelectorAll(trigersSelector),
+      content = document.querySelectorAll(contentSelector);
+  btn.forEach(function (h, i) {
+    h.addEventListener('click', function () {
+      checkContent(i);
+    });
+  });
+  content.forEach(function (c) {
+    c.style.display = 'none';
+    c.classList.add('animated', 'fadeInUp');
+  });
+
+  function showContent(countContent) {
+    content[countContent].style.display = 'block';
+    btn[countContent].classList.add('ui-accordion-header-active');
+    btn[countContent].style.marginBottom = '20px';
+    btn[countContent].style.cursor = 'pointer';
+  }
+
+  function hideContent(countContent) {
+    content[countContent].style.display = 'none';
+    btn[countContent].classList.remove('ui-accordion-header-active');
+  }
+
+  function checkContent(countContent) {
+    if (content[countContent].style.display === 'none') {
+      showContent(countContent);
+    } else {
+      hideContent(countContent);
+    }
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (accordion);
 
 /***/ }),
 
