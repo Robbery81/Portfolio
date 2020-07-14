@@ -34,7 +34,6 @@ export default class MiniSlider extends Slider {
         });
     }
 
-
     init() {
         this.container.style.cssText = `
         display:flex;
