@@ -1,4 +1,4 @@
-export default class playVideo {
+export default class PlayVideo {
     constructor(trigers, overlay) {
         this.btns = document.querySelectorAll(trigers);
         this.overlay = document.querySelector(overlay);

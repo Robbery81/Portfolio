@@ -1,11 +1,19 @@
 import Slider from './slider';
 
 export default class MiniSlider extends Slider {
-    constructor(container, prev, next, autoplay, animate, activeClass) {
-        super(container, prev, next, autoplay, animate, activeClass);
+    constructor(container, prev, next, autoplay, animate, activeClass, slideClass) {
+        super(container, prev, next, autoplay, animate, activeClass, slideClass);
+    }
+
+    checkClass() {
+        if(this.slideClass) {
+            this.slides = document.getElementsByClassName(this.slideClass);
+        }
     }
 
     decorizeSlides() {
+        
+        this.checkClass();
         this.slides.forEach(slide => {
             slide.classList.remove(this.activeClass);
             if (this.animate) {

@@ -1,7 +1,9 @@
 //import Slider from './modules/slider/slider';
 import MainSlider from './modules/slider/slider-main';
 import MiniSlider from './modules/slider/slider-mini';
-import playVideo from './modules/playVideo';
+import PlayVideo from './modules/playVideo';
+import Difference from './modules/difference';
+import Forms from './modules/forms';
 
 window.addEventListener('DOMContentLoaded', () => {
     const slider = new MainSlider({
@@ -32,10 +34,14 @@ window.addEventListener('DOMContentLoaded', () => {
         container: '.feed__slider', 
         next: '.feed__slider .slick-next', 
         prev: '.feed__slider .slick-prev',
-        activeClass: 'feed__item-active'
+        activeClass: 'feed__item-active',
+        slideClass: 'feed__item'
     });
     feedSlider.init();
 
-    let player = new playVideo('.showup .play', '.overlay');
+    let player = new PlayVideo('.showup .play', '.overlay');
     player.init();
+
+    new Difference('.officerold', '.officernew', '.officer__card-item').init();
+    new Forms('form').init();
 });
