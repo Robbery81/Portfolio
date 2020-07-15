@@ -6,11 +6,19 @@ import Difference from './modules/difference';
 import Forms from './modules/forms';
 
 window.addEventListener('DOMContentLoaded', () => {
-    const slider = new MainSlider({
+    const mainPageSlider = new MainSlider({
         container: '.page',
         btns: '.next'
     });
-    slider.render();
+    mainPageSlider.render();
+
+    const secondMaineSlider = new MainSlider({
+        container: '.moduleapp',
+        btns: '.next',
+        nextModule: '.nextmodule',
+        prevModule: '.prevmodule'
+    });
+    secondMaineSlider.render();
 
     const showUpSlider = new MiniSlider({
         container: '.showup__content-slider',
