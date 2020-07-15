@@ -4,6 +4,8 @@ import MiniSlider from './modules/slider/slider-mini';
 import PlayVideo from './modules/playVideo';
 import Difference from './modules/difference';
 import Forms from './modules/forms';
+import Accordeon from './modules/accordeon';
+import Download from './modules/download';
 
 window.addEventListener('DOMContentLoaded', () => {
     const mainPageSlider = new MainSlider({
@@ -47,9 +49,12 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     feedSlider.init();
 
-    let player = new PlayVideo('.showup .play', '.overlay');
-    player.init();
+    new PlayVideo('.showup .play', '.overlay').init();
+    new PlayVideo('.module__video-item .play', '.overlay').init();
 
     new Difference('.officerold', '.officernew', '.officer__card-item').init();
     new Forms('form').init();
+
+    new Accordeon('.module__info-show .plus').init();
+    new Download('.download').init();
 });
