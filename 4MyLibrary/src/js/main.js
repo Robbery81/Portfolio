@@ -1,6 +1,4 @@
-import './lib/core'; 
+import './lib/lib';
 
-$('div').hide();
-setTimeout(() => {
-    $('div').show();
-}, 3000);
+$('div').hide().show();
+$('.active').toggle();
