@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      --main-bg-color: #E6E6E6;
+
+      --equel-button-bg-color: #CCCAC9;
+      --selected-equel-button-bg-color: #5D5A58;
+
+      --operation-button-bg-color: #F0F0F0;
+      --num-button-bg-color: #F8F8F8;
+
+      --hover-button-bg-color: #D6D6D6;
+      --selected-button-bg-color: #CBCBCB;
+    }
+
+    body {
+      display: block;
+    }
+
+    .calculator {
+      border: 1px solid grey;
+      width: 320px;
+      height: auto;
+      min-height: 300px;
+      background-color: var(--main-bg-color);
+      padding: 2px;
+    }
+
+    .name {
+      font-size: 15px;
+      font-family: sans-serif;
+      color: grey;
+    }
+
+    .header_wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      padding-top: 5px;
+      padding-left: 5px;
+      padding-right: 3px;
+    }
+
+    .button_wrapper,
+    .line_buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .field_wrapper {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      flex-direction: row;
+    }
+
+    .field_current {
+      display: block;
+    }
+
+    .field {
+      display: flex;
+      justify-content: flex-end;
+      border: none;
+      font-size: 40px;
+      font-weight: bold;
+      padding-top: 10px;
+      padding-bottom: 25px;
+      padding-right: 3px;
+    }
+
+    .history_icon {
+      cursor: pointer;
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25%;
+      height: 40px;
+      text-align: center;
+      background-color: var(--operation-button-bg-color);
+      margin: 1px 1px;
+      cursor: default;
+      font-size: 17px;
+      font-weight: lighter;
+    }
+
+    .button span {
+      display: block;
+      font-family: sans-serif;
+    }
+
+    .button img {
+      display: block;
+    }
+
+    .button__white {
+      background-color: var(--num-button-bg-color);
+    }
+
+    .button__white:hover,
+    .button__gray:hover {
+      background-color: #CBCBCB;
+    }
+
+    .button__equel {
+      background-color: var(--equel-button-bg-color);
+    }
+
+    .button__equel:hover {
+      background-color: #A5A4A2;
+    }
+
+    .history_modal {
+      position: absolute;
+      display: none;
+      top: 30px;
+      left: 0;
+      background-color: rgba(255,255,255,0.9);
+      width: 320px;
+      height: 347px;
+      border: 1px solid black;
+      overflow: auto;
+    }
+    .history_modal span {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .history_wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10px;
+    }
+
+    .history_element {
+      width: 100%;
+    }
+
+    .history_clear {
+      display: block;
+    }
+
+    .history_clear img{
+      display: block;
+      position: fixed;
+      top: 330px;
+      left: 274px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>
