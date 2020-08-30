@@ -411,7 +411,7 @@ const calculator = {
       case this.division:
       case this.multiply: 
       return `${count})
-      ${this.buferNumberOne} ${this.buferOperationType} ${this.buferNumberTwo} = ${this.getInputField()}`;
+      ${this.buferNumberOne} ${this.buferOperationType} ${this.buferNumberTwo} = ${this.getInputField()} = `;
     }
   },
 
