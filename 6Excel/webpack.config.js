@@ -29,7 +29,9 @@ const isLoaders = () => {
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
-    entry: ['@babel/polyfill', './index.js'],
+    entry: [
+        '@babel/polyfill',
+        './index.js'],
     output: {
         filename: filename('js'),
         path: path.resolve(__dirname, 'dist'),
@@ -46,6 +48,7 @@ module.exports = {
     devServer: {
         hot: isDev,
         port: 3000,
+        liveReload: true,
     },
     devtool: isDev ? 'source-map' : false,
     plugins: [
