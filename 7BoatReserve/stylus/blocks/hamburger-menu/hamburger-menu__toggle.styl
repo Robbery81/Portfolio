@@ -1,0 +1,19 @@
+#hamburger-menu__toggle {
+  opacity: 0;
+}
+
+#hamburger-menu__toggle:checked ~ .hamburger-menu__btn > span {
+  transform: rotate(45deg);
+}
+#hamburger-menu__toggle:checked ~ .hamburger-menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#hamburger-menu__toggle:checked ~ .hamburger-menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#hamburger-menu__toggle:checked ~ .hamburger-menu__box {
+  visibility: visible;
+  right: 0;
+}

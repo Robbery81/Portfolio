@@ -1,0 +1,22 @@
+{
+  "name": "adv-html-exam",
+  "version": "1.0.0",
+  "description": "exam-project",
+  "main": "index.js",
+  "scripts": {
+    "stylus:watch": "stylus -r -w stylus/ -o style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/alexandrUsenko/adv-html-exam.git"
+  },
+  "author": "Aleksandr Usenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/alexandrUsenko/adv-html-exam/issues"
+  },
+  "homepage": "https://gitlab.com/alexandrUsenko/adv-html-exam#readme",
+  "devDependencies": {
+    "stylus": "^0.54.8"
+  }
+}
