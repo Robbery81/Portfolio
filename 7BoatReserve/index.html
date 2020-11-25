@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Nava</title>
+</head>
+<body>
+<header class="main-header">
+    <div class="container d-flex flex-justify-between flex-align-center">
+        <a href="#" class="logo">
+            <img src="./assets/images/logo.png" alt="logo" class="logo__img">
+        </a>
+        <div class="hamburger-menu">
+            <input id="hamburger-menu__toggle" type="checkbox" />
+            <label class="hamburger-menu__btn" for="hamburger-menu__toggle">
+                <span></span>
+            </label>
+            <ul class="hamburger-menu__box main-nav__list">
+                <li><a class="hamburger-menu__item" href="#">Top destination</a></li>
+                <li><a class="hamburger-menu__item" href="#">Add your boat</a></li>
+                <li><a class="hamburger-menu__item" href="#">Sign up</a></li>
+            </ul>
+        </div>
+        <nav class="main-nav">
+            <ul class="main-nav__list d-flex flex-align-center">
+                <li class="main-nav__list-item">
+                    <a href="#" class="main-nav__link d-block">Top destination</a></li>
+                <li class="main-nav__list-item">
+                    <a href="#" class="main-nav__link d-block">Add your boat</a></li>
+                <li class="main-nav__list-item">
+                    <a href="#" class="button button__nav d-block">Sign up</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="numbers-section">
+        <header class="numbers-section__header d-flex flex-justify-center flex-align-center flex-col">
+            <div class="container d-flex flex-justify-center flex-align-center flex-col">
+                <h1 class="headline headline__main">Reserve a boat now!</h1>
+                <h2 class="headline margin-top-20">and set your sails into paradise!</h2>
+
+                <form class="form d-flex flex-justify-center margin-top-90">
+                    <input class="form__input-text d-block" type="text" size="40" placeholder="What is your destination, sailor?">
+                    <div class="button button__submit d-flex flex-justify-center flex-align-center">
+                        <div class="button__submit-icon"></div>
+                        <span class="d-block button__submit-content">Find a boat</span>
+                    </div>
+                </form>
+            </div>
+        </header>
+        <footer class="numbers-section__footer d-flex flex-justify-center flex-align-center">
+            <ul class="numbers-section__list d-flex flex-row flex-justify-between">
+                <li class="numbers-section__list-item d-flex flex-col flex-align-center">
+                    <h3 class="numbers-section__headline">2,300</h3>
+                    <small class="numbers-section__description">Destinations</small></li>
+                <li class="numbers-section__list-item d-flex flex-col flex-align-center">
+                    <h3 class="numbers-section__headline">1,000</h3>
+                    <small class="numbers-section__description">Cities</small></li>
+                <li class="numbers-section__list-item d-flex flex-col flex-align-center">
+                    <h3 class="numbers-section__headline">35,000</h3>
+                    <small class="numbers-section__description">Boats</small></li>
+                <li class="numbers-section__list-item d-flex flex-col flex-align-center">
+                    <h3 class="numbers-section__headline">50,000</h3>
+                    <small class="numbers-section__description">Sailors</small></li>
+            </ul>
+        </footer>
+    </section>
+    <section class="explore-section container d-flex flex-justify-center flex-align-center flex-col">
+        <h2 class="headline headline__main_black">Explore our top destinations</h2>
+        <h3 class="headline headline__second_small margin-top-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</h3>
+        <ul class="image-list d-flex flex-justify-between margin-top-50">
+            <li class="image-list__item image-list__item_big d-block hover-block">
+                <img src="./assets/images/prokat_1.jpg" alt="boat_image" class="image-list__item-image"/>
+                <a href="#" class="image-list__item-link hover-block__item">
+                    <div class="button__submit-info d-flex flex-justify-center flex-align-center position-absolute__button-info">
+                        <img class="button__submit-icon" src="./assets/images/boat_icon.png" alt="boat_icon">
+                        <span class="button__submit-content">730</span>
+                    </div>
+                </a>
+                <a class="image-list__headline position-absolute__image-headline" href="#">
+                    <h4 class="image-list__headline image-list__headline-title">Figueira da Foz</h4>
+                    <small class="image-list__headline image-list__headline-description d-block margin-top-5">Portugal</small>
+                </a>
+            </li>
+            <li class="image-list__item d-block hover-block">
+                <img src="./assets/images/prokat_2.jpg" alt="boat_image" class="image-list__item-image"/>
+                <a href="#" class="image-list__item-link hover-block__item">
+                    <div class="button__submit-info d-flex flex-justify-center flex-align-center position-absolute__button-info">
+                        <img class="button__submit-icon" src="./assets/images/boat_icon.png" alt="boat_icon">
+                        <span class="button__submit-content">621</span>
+                    </div>
+                </a>
+                <a class="image-list__headline position-absolute__image-headline" href="#">
+                    <h4 class="image-list__headline image-list__headline-title">Ibiza</h4>
+                    <small class="image-list__headline image-list__headline-description d-block margin-top-5">Spain</small>
+                </a>
+            </li>
+            <li class="image-list__item d-block hover-block">
+                <img src="./assets/images/prokat_3.jpg" alt="boat_image" class="image-list__item-image"/>
+                <a href="#" class="image-list__item-link hover-block__item">
+                    <div class="button__submit-info d-flex flex-justify-center flex-align-center position-absolute__button-info">
+                        <img class="button__submit-icon" src="./assets/images/boat_icon.png" alt="boat_icon">
+                        <span class="button__submit-content">543</span>
+                    </div>
+                </a>
+                <a class="image-list__headline position-absolute__image-headline" href="#">
+                    <h4 class="image-list__headline image-list__headline-title">Palma de Mallorca</h4>
+                    <small class="image-list__headline image-list__headline-description d-block margin-top-5">Spain</small>
+                </a>
+            </li>
+            <li class="image-list__item d-block hover-block">
+                <img src="./assets/images/prokat_4.jpg" alt="boat_image" class="image-list__item-image"/>
+                <a href="#" class="image-list__item-link hover-block__item">
+                    <div class="button__submit-info d-flex flex-justify-center flex-align-center position-absolute__button-info">
+                        <img class="button__submit-icon" src="./assets/images/boat_icon.png" alt="boat_icon">
+                        <span class="button__submit-content">495</span>
+                    </div>
+                </a>
+                <a class="image-list__headline position-absolute__image-headline" href="#">
+                    <h4 class="image-list__headline image-list__headline-title">Portofino</h4>
+                    <small class="image-list__headline image-list__headline-description d-block margin-top-5">Italy</small>
+                </a>
+            </li>
+            <li class="image-list__item d-block hover-block">
+                <img src="./assets/images/prokat_5.jpg" alt="boat_image" class="image-list__item-image"/>
+                <a href="#" class="image-list__item-link hover-block__item">
+                    <div class="button__submit-info d-flex flex-justify-center flex-align-center position-absolute__button-info">
+                        <img class="button__submit-icon" src="./assets/images/boat_icon.png" alt="boat_icon">
+                        <span class="button__submit-content">402</span>
+                    </div>
+                </a>
+                <a class="image-list__headline position-absolute__image-headline" href="#">
+                    <h4 class="image-list__headline image-list__headline-title">Port Hercules</h4>
+                    <small class="image-list__headline image-list__headline-description d-block margin-top-5">Monaco</small>
+                </a>
+            </li>
+        </ul>
+        <div class="button button__info margin-top-90">Explore more destinations</div>
+    </section>
+    <section class="own-boat-section">
+        <div class="container d-flex flex-justify-center flex-align-center flex-col">
+            <h2 class="headline headline__main">Have you own boat?</h2>
+            <h3 class="headline margin-top-20">Navigare necesse est, vivere non est necesse</h3>
+            <div class="button button__info button__info_red margin-top-80">Make money with your boat</div>
+        </div>
+    </section>
+    <section class="explore-section container d-flex flex-justify-center flex-align-center flex-col">
+        <h2 class="headline headline__main_black">Featured boats</h2>
+        <h3 class="headline headline__second_small margin-top-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</h3>
+        <ul class="image-list d-flex flex-justify-between margin-top-50">
+            <li class="image-list__item image-list__item_middle d-block hover-block">
+                <img src="./assets/images/boat_1.jpg" alt="boat_image" class="image-list__item-image"/>
+                <a href="#" class="image-list__item-link hover-block__item">
+                    <div class="button__submit-info d-flex flex-justify-center flex-align-center position-absolute__button-info">
+                        <span class="button__submit-content">€580 / day</span>
+                    </div>
+                </a>
+                <a class="image-list__headline position-absolute__image-headline_top250" href="#">
+                    <h4 class="image-list__headline image-list__headline-title">Delphia 47</h4>
+                    <div class="image-list__headline image-list__headline-description image-list__headline-description_small d-block margin-top-16">
+                        <img src="./assets/images/map_marker.png" alt="map_marker">
+                        <span>Gdańsk, Poland</span>
+                        <img src="./assets/images/account_multiple.png" alt="map_marker">
+                        <span>8 Berths</span>
+                    </div>
+                </a>
+            </li>
+            <li class="image-list__item image-list__item_middle d-block hover-block">
+                <img src="./assets/images/boat_2.jpg" alt="boat_image" class="image-list__item-image"/>
+                <a href="#" class="image-list__item-link hover-block__item">
+                    <div class="button__submit-info d-flex flex-justify-center flex-align-center position-absolute__button-info">
+                        <span class="button__submit-content">€950 / day</span>
+                    </div>
+                </a>
+                <a class="image-list__headline position-absolute__image-headline_top250" href="#">
+                    <h4 class="image-list__headline image-list__headline-title">Sense 55</h4>
+                    <div class="image-list__headline image-list__headline-description image-list__headline-description_small d-block margin-top-16">
+                        <img src="./assets/images/map_marker.png" alt="map_marker">
+                        <span>Portofino, Italy</span>
+                        <img src="./assets/images/account_multiple.png" alt="map_marker">
+                        <span>12 Berths</span>
+                    </div>
+                </a>
+            </li>
+            <li class="image-list__item image-list__item_middle d-block hover-block">
+                <img src="./assets/images/boat_3.jpg" alt="boat_image" class="image-list__item-image"/>
+                <a href="#" class="image-list__item-link hover-block__item">
+                    <div class="button__submit-info d-flex flex-justify-center flex-align-center position-absolute__button-info">
+                        <span class="button__submit-content">€820 / day</span>
+                    </div>
+                </a>
+                <a class="image-list__headline position-absolute__image-headline_top250" href="#">
+                    <h4 class="image-list__headline image-list__headline-title">Crusier 51</h4>
+                    <div class="image-list__headline image-list__headline-description image-list__headline-description_small d-block margin-top-16">
+                        <img src="./assets/images/map_marker.png" alt="map_marker">
+                        <span>Palma de Mallorca, Spain</span>
+                        <img src="./assets/images/account_multiple.png" alt="map_marker">
+                        <span>10 Berths</span>
+                    </div>
+                </a>
+            </li>
+            <li class="image-list__item image-list__item_middle d-block hover-block">
+                <img src="./assets/images/boat_4.jpg" alt="boat_image" class="image-list__item-image"/>
+                <a href="#" class="image-list__item-link hover-block__item">
+                    <div class="button__submit-info d-flex flex-justify-center flex-align-center position-absolute__button-info">
+                        <span class="button__submit-content">€400 / day</span>
+                    </div>
+                </a>
+                <a class="image-list__headline position-absolute__image-headline_top250" href="#">
+                    <h4 class="image-list__headline image-list__headline-title">Crusier 41S</h4>
+                    <div class="image-list__headline image-list__headline-description image-list__headline-description_small d-block margin-top-16">
+                        <img src="./assets/images/map_marker.png" alt="map_marker">
+                        <span>Lisbon, Portugal</span>
+                        <img src="./assets/images/account_multiple.png" alt="map_marker">
+                        <span>8 Berths</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="button button__info margin-top-90">Load more boats</div>
+    </section>
+</main>
+<footer class="main-footer d-flex flex-justify-center flex-align-center">
+    <div class="container container_small d-flex flex-justify-between flex-wrap main-footer__wrapper">
+        <ul class="main-footer__list main-footer__list_order">
+            <h3 class="main-footer__list-headline">Top locations</h3>
+            <li class="main-footer__list-item margin-top-16">
+                <a href="" class="main-footer__list-link">Lorem ipsum dolore</a>
+            </li>
+            <li class="main-footer__list-item">
+                <a href="" class="main-footer__list-link">Sit amet consectetur</a>
+            </li>
+            <li class="main-footer__list-item">
+                <a href="" class="main-footer__list-link">Adipisicing elit</a>
+            </li>
+            <li class="main-footer__list-item">
+                <a href="" class="main-footer__list-link">Eiusmod tempor</a>
+            </li>
+            <li class="main-footer__list-item">
+                <a href="" class="main-footer__list-link">Incididunt ut labor</a>
+            </li>
+        </ul>
+        <ul class="main-footer__list main-footer__list_order">
+            <h3 class="main-footer__list-headline">Featured boat</h3>
+            <li class="main-footer__list-item margin-top-16">
+                <a href="" class="main-footer__list-link">Lorem ipsum dolore</a>
+            </li>
+            <li class="main-footer__list-item">
+                <a href="" class="main-footer__list-link">Sit amet consectetur</a>
+            </li>
+            <li class="main-footer__list-item">
+                <a href="" class="main-footer__list-link">Adipising elit</a>
+            </li>
+            <li class="main-footer__list-item">
+                <a href="" class="main-footer__list-link">Eiusmod tempor</a>
+            </li>
+        </ul>
+        <div class="flex-basis main-footer__form-wrapper">
+            <h3 class="main-footer__list-headline">Subscribe to our newsletter</h3>
+            <form class="form form__footer d-flex margin-top-20">
+                <input class="form__input-text form__input-text_small d-block" type="text" size="40" placeholder="Your email adress">
+                <div class="button button__submit button__submit-footer d-flex flex-justify-center flex-align-center">
+                    <span class="d-block button__submit-content">Subscribe</span>
+                </div>
+            </form>
+            <ul class="social d-flex margin-top-35">
+                <li class="social__circle d-flex flex-align-center flex-justify-center">
+                    <a href="#"><span class="social__circle-icon icon-facebook"></span></a>
+                </li>
+                <li class="social__circle d-flex flex-align-center flex-justify-center">
+                    <a href="#"><span class="social__circle-icon icon-twitter"></span></a>
+                </li>
+                <li class="social__circle d-flex flex-align-center flex-justify-center">
+                    <a href="#"><span class="social__circle-icon icon-google-plus"></span></a>
+                </li>
+            </ul>
+        </div>
+        <ul class="main-footer__list main-footer__list_order">
+            <h3 class="main-footer__list-headline">Contact us</h3>
+            <li class="main-footer__list-item margin-top-16">
+                <a href="" class="main-footer__list-link">Lorem ipsum dolore</a>
+            </li>
+            <li class="main-footer__list-item">
+                <a href="" class="main-footer__list-link">Sit amet consectetur</a>
+            </li>
+            <li class="main-footer__list-item">
+                <a href="" class="main-footer__list-link">Adipisicing elit</a>
+            </li>
+            <li class="main-footer__list-item">
+                <a href="" class="main-footer__list-link">Eiusmod tempor</a>
+            </li>
+            <li class="main-footer__list-item">
+                <a href="" class="main-footer__list-link">Incididunt ut labor</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
